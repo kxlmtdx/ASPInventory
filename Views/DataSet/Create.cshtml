@@ -1,0 +1,83 @@
+﻿@model DataSet
+@{
+    ViewData["Title"] = "Index";
+}
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 style="color: black;">Create DataSet</h2>
+        </div>
+        <div class="mb-3">
+            <label asp-for="IN">И/Н</label>
+            <input asp-for="IN" class="form-control" />
+            <span asp-validation-for="IN" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Model">Модель</label>
+            <input asp-for="Model" class="form-control" />
+            <span asp-validation-for="Model" class="text-danger"></span> 
+        </div>
+        <div class="mb-3">
+            <label asp-for="Accepted" class="form-label">Принят на склад</label>
+            <input asp-for="Accepted" class="form-control" type="date" />
+            <span asp-validation-for="Accepted" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Id_Condition">Состояние</label>
+            <select asp-for="Id_Condition" class="form-control" asp-items="ViewBag.Id_Condition"></select>
+            <span asp-validation-for="Id_Condition" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Id_StorageLocation">Место хранения</label>
+            <select asp-for="Id_StorageLocation" class="form-control" asp-items="ViewBag.Id_StorageLocation"></select>
+            <span asp-validation-for="Id_StorageLocation" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Given_Away" class="form-label">Отдан на ремонт</label>
+            <input asp-for="Given_Away" class="form-control" type="date" />
+            <span asp-validation-for="Given_Away" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Taken_Away" class="form-label">Забран с ремонта</label>
+            <input asp-for="Taken_Away" class="form-control" type="date" />
+            <span asp-validation-for="Taken_Away" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="SentToTO" class="form-label">Отдан в ТО</label>
+            <input asp-for="SentToTO" class="form-control" type="date" />
+            <span asp-validation-for="SentToTO" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="From_TO">С какого ТО</label>
+            <select asp-for="From_TO" class="form-control" asp-items="ViewBag.From_TO"></select>
+            <span asp-validation-for="From_TO" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="In_TO">В какое ТО</label>
+            <select asp-for="In_TO" class="form-control" asp-items="ViewBag.From_TO"></select>
+            <span asp-validation-for="In_TO" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Transmited_From">От кого передан (Фамилия И.О)</label>
+            <input asp-for="Transmited_From" class="form-control" />
+            <span asp-validation-for="Transmited_From" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Transfered_To">Кому передан (Фамилия И.О)</label>
+            <input asp-for="Transfered_To" class="form-control" />
+            <span asp-validation-for="Transfered_To" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+        <a asp-controller="DataSet" asp-action="Index" class="btn btn-secondary" style="width:150px">Back to List</a>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+      <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
