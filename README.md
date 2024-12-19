@@ -25,15 +25,11 @@ To run the ASPInventory project locally, follow these steps:
 ```
 2. **Set up the database:**
 
-Create a new database with any name.
+Create a new database with named them Categories.
 
-Replace database name in ApplicationDbContext.cs
-```cs
-public DbSet<DataSet> YOUR_DB { get; set; }
-```
 Update the connection string in appsettings.json to point to your SQL Server instance.
 ```json
-"DefaultConnection": "Server=...;Database=...;Trusted_Connection=True;TrustServerCertificate=True"
+"DefaultConnection": "Server=...;Database=Categories;Trusted_Connection=True;TrustServerCertificate=True"
 ```
 
 3. **Run the migrations:**
