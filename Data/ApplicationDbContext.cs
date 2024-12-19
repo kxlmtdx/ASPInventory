@@ -10,9 +10,6 @@ namespace ASPInventory.Data
         {
 
         }
-        //Replace YOUR_DB before run
-        public DbSet<DataSet> YOUR_DB { get; set; }
-
-
+        public DbSet<DataSet> Categories { get; set; }
     }
 }
