@@ -3,10 +3,6 @@
 [![.NET Foundation](https://img.shields.io/badge/.NET%20Foundation-blueviolet.svg)](https://www.dotnetfoundation.org/)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-<p align="center">
-<img alt="WiFi Duck Logo" src="Assets/overwiev.jpg" width="640">
-</p>
-
 ## About
 
 ASPInventory is a web application built on the ASP.NET MVC framework, designed for managing and tracking inventory equipment and assets. This project utilizes Microsoft SQL Server as its database backend, providing a robust solution for organizations to maintain an organized inventory system.
