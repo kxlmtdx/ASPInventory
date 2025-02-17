@@ -46,7 +46,7 @@ p.s migrations soon
 ## ʳᵘsection
 1. **Скачайте проект в .zip или клонируйте репозиторий:**
  ```bash
- git clone https://github.com/yourusername/ASPInventory.git
+ git clone https://github.com/kxlmtdx/ASPInventory.git
  cd ASPInventory 
 ```
 
